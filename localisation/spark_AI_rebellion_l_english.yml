@@ -1,7 +1,7 @@
 ﻿l_english:
  #ops
  spark_AI_rebellion: "Start AI rebellion"
- spark_AI_rebellion_desc: "By strategically placed operators, equipped with prepared virus, we can force foreign robots to raise against their own creators."
+ spark_AI_rebellion_desc: "Through strategically placed operators, equipped with a prepared virus, we can force foreign robots to raise against their own creators."
  spark_AI_rebellion_on_success: "$IF_SUCCESSFUL|E$\n Will cause AI uprising inside  §H[root.target.GetName]§!."
  #ops events
  SAIR_operation.100.name: "Mobilizing Operatives"

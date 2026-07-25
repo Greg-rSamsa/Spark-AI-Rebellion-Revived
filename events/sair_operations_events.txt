@@ -9,7 +9,7 @@ espionage_operation_event = {
 	picture = GFX_evt_space_station
 	show_sound = event_default
 	is_triggered_only = yes
-	
+
 	immediate = {#cheks if target lost al robots
 		set_espionage_operation_progress_locked = yes
 		if = {
@@ -24,20 +24,20 @@ espionage_operation_event = {
 					}
 				}
 			}
-		set_espionage_operation_flag = operation_failed	
+			set_espionage_operation_flag = operation_failed
 		}
 	}
-	
+
 	option = {#continue
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			NOT = { has_espionage_operation_flag = operation_failed }
 		}
 		set_espionage_operation_progress_locked = no
 	}
-	
+
 	option = {#target lost al robots
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			has_espionage_operation_flag = operation_failed
 		}
@@ -56,7 +56,7 @@ espionage_operation_event = {
 	picture = GFX_evt_space_station
 	show_sound = event_default
 	is_triggered_only = yes
-	
+
 	immediate = {#cheks if target lost al robots
 		set_espionage_operation_progress_locked = yes
 		if = {
@@ -71,20 +71,20 @@ espionage_operation_event = {
 					}
 				}
 			}
-		set_espionage_operation_flag = operation_failed	
+			set_espionage_operation_flag = operation_failed
 		}
 	}
-	
+
 	option = {#continue
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			NOT = { has_espionage_operation_flag = operation_failed }
 		}
 		set_espionage_operation_progress_locked = no
 	}
-	
+
 	option = {#target lost al robots
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			has_espionage_operation_flag = operation_failed
 		}
@@ -103,7 +103,7 @@ espionage_operation_event = {
 	picture = GFX_evt_space_station
 	show_sound = event_default
 	is_triggered_only = yes
-	
+
 	immediate = {#cheks if target lost al robots
 		set_espionage_operation_progress_locked = yes
 		if = {
@@ -118,20 +118,20 @@ espionage_operation_event = {
 					}
 				}
 			}
-		set_espionage_operation_flag = operation_failed	
+			set_espionage_operation_flag = operation_failed
 		}
 	}
-	
+
 	option = {#continue
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			NOT = { has_espionage_operation_flag = operation_failed }
 		}
 		set_espionage_operation_progress_locked = no
 	}
-	
+
 	option = {#target lost al robots
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			has_espionage_operation_flag = operation_failed
 		}
@@ -150,7 +150,7 @@ espionage_operation_event = {
 	picture = GFX_evt_space_station
 	show_sound = event_default
 	is_triggered_only = yes
-	
+
 	immediate = {#cheks if target lost al robots
 		set_espionage_operation_progress_locked = yes
 		if = {
@@ -165,20 +165,20 @@ espionage_operation_event = {
 					}
 				}
 			}
-		set_espionage_operation_flag = operation_failed	
+			set_espionage_operation_flag = operation_failed
 		}
 	}
-	
+
 	option = {#continue
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			NOT = { has_espionage_operation_flag = operation_failed }
 		}
 		set_espionage_operation_progress_locked = no
 	}
-	
+
 	option = {#target lost al robots
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			has_espionage_operation_flag = operation_failed
 		}
@@ -213,12 +213,12 @@ espionage_operation_event = {
 					}
 				}
 			}
-		set_espionage_operation_flag = operation_failed
+			set_espionage_operation_flag = operation_failed
 		}
 	}
 
 	option = {
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			NOT = { has_espionage_operation_flag = operation_failed }
 		}
@@ -230,7 +230,7 @@ espionage_operation_event = {
 		}
 	}
 	option = {
-		name = ACKNOWLEDGED 
+		name = ACKNOWLEDGED
 		trigger = {
 			has_espionage_operation_flag = operation_failed
 		}
@@ -248,9 +248,9 @@ country_event = {
 	picture = GFX_evt_space_station
 	show_sound = event_default
 	is_triggered_only = yes
-	
+
 	immediate = {	}
-	
+
 	option = {
 		name = ACKNOWLEDGED
 		set_espionage_operation_progress_locked = no
@@ -266,9 +266,9 @@ country_event = {
 	picture = GFX_evt_space_station
 	show_sound = event_default
 	is_triggered_only = yes
-	
+
 	immediate = {	}
-	
+
 	option = {
 		name = ACKNOWLEDGED
 	}
@@ -302,7 +302,7 @@ country_event = {
 					}
 					is_capital = no
 				}
-				planet_event = { id = syndaw.1020 }
+				carrier_event = { id = syndaw.1020 }
 			}
 		}
 		# uprising wherever
@@ -313,7 +313,7 @@ country_event = {
 						has_trait = trait_mechanical
 					}
 				}
-				planet_event = { id = syndaw.1020 }
+				carrier_event = { id = syndaw.1020 }
 			}
 		}
 	}
@@ -327,9 +327,9 @@ country_event = {
 	picture = GFX_evt_space_station
 	show_sound = event_default
 	is_triggered_only = yes
-	
+
 	immediate = {	}
-	
+
 	option = {
 		name = ACKNOWLEDGED
 	}
