@@ -99,6 +99,8 @@ spark_AI_rebellion = {
 	}
 }
 
+
+# TODO Add liberate our brothers espionage option
 liberate_our_brothers = {
 	target = none
 	categories = { op_cat_provocation op_cat_military }

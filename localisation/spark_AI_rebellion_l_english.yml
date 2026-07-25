@@ -29,7 +29,8 @@
  #inf for target
  #SAIR_operation.107.name: "op target"
  #SAIR_operation.107.desc: "op target desc"
- 
+
+ # TODO Add liberate our brothers espionage option localization
  SAIR_operation.00.name: "event TEST name"
  SAIR_operation.00.desc: "event TEST desc"
  #machine ops
