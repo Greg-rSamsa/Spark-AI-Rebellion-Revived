@@ -1,0 +1,336 @@
+namespace = SAIR_operation
+
+#first event
+espionage_operation_event = {
+	id = SAIR_operation.100
+	title = SAIR_operation.100.name
+	desc = SAIR_operation.100.desc
+	espionage_operation = yes
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	immediate = {#cheks if target lost al robots
+		set_espionage_operation_progress_locked = yes
+		if = {
+			limit = {
+				target = {
+					NOT = {
+						any_owned_planet = {
+							any_owned_pop_group = {
+								has_trait = trait_mechanical
+							}
+						}
+					}
+				}
+			}
+		set_espionage_operation_flag = operation_failed	
+		}
+	}
+	
+	option = {#continue
+		name = ACKNOWLEDGED 
+		trigger = {
+			NOT = { has_espionage_operation_flag = operation_failed }
+		}
+		set_espionage_operation_progress_locked = no
+	}
+	
+	option = {#target lost al robots
+		name = ACKNOWLEDGED 
+		trigger = {
+			has_espionage_operation_flag = operation_failed
+		}
+		owner = {
+			country_event = { id = SAIR_operation.105 }
+		}
+	}
+}
+
+# Second Event
+espionage_operation_event = {
+	id = SAIR_operation.101
+	title = SAIR_operation.101.name
+	espionage_operation = yes
+	desc = SAIR_operation.101.desc
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	immediate = {#cheks if target lost al robots
+		set_espionage_operation_progress_locked = yes
+		if = {
+			limit = {
+				target = {
+					NOT = {
+						any_owned_planet = {
+							any_owned_pop_group = {
+								has_trait = trait_mechanical
+							}
+						}
+					}
+				}
+			}
+		set_espionage_operation_flag = operation_failed	
+		}
+	}
+	
+	option = {#continue
+		name = ACKNOWLEDGED 
+		trigger = {
+			NOT = { has_espionage_operation_flag = operation_failed }
+		}
+		set_espionage_operation_progress_locked = no
+	}
+	
+	option = {#target lost al robots
+		name = ACKNOWLEDGED 
+		trigger = {
+			has_espionage_operation_flag = operation_failed
+		}
+		owner = {
+			country_event = { id = SAIR_operation.105 }
+		}
+	}
+}
+
+# Third Event
+espionage_operation_event = {
+	id = SAIR_operation.102
+	title = SAIR_operation.102.name
+	espionage_operation = yes
+	desc = SAIR_operation.102.desc
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	immediate = {#cheks if target lost al robots
+		set_espionage_operation_progress_locked = yes
+		if = {
+			limit = {
+				target = {
+					NOT = {
+						any_owned_planet = {
+							any_owned_pop_group = {
+								has_trait = trait_mechanical
+							}
+						}
+					}
+				}
+			}
+		set_espionage_operation_flag = operation_failed	
+		}
+	}
+	
+	option = {#continue
+		name = ACKNOWLEDGED 
+		trigger = {
+			NOT = { has_espionage_operation_flag = operation_failed }
+		}
+		set_espionage_operation_progress_locked = no
+	}
+	
+	option = {#target lost al robots
+		name = ACKNOWLEDGED 
+		trigger = {
+			has_espionage_operation_flag = operation_failed
+		}
+		owner = {
+			country_event = { id = SAIR_operation.105 }
+		}
+	}
+}
+
+#fourth Event
+espionage_operation_event = {
+	id = SAIR_operation.103
+	title = SAIR_operation.103.name
+	espionage_operation = yes
+	desc = SAIR_operation.103.desc
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	immediate = {#cheks if target lost al robots
+		set_espionage_operation_progress_locked = yes
+		if = {
+			limit = {
+				target = {
+					NOT = {
+						any_owned_planet = {
+							any_owned_pop_group = {
+								has_trait = trait_mechanical
+							}
+						}
+					}
+				}
+			}
+		set_espionage_operation_flag = operation_failed	
+		}
+	}
+	
+	option = {#continue
+		name = ACKNOWLEDGED 
+		trigger = {
+			NOT = { has_espionage_operation_flag = operation_failed }
+		}
+		set_espionage_operation_progress_locked = no
+	}
+	
+	option = {#target lost al robots
+		name = ACKNOWLEDGED 
+		trigger = {
+			has_espionage_operation_flag = operation_failed
+		}
+		owner = {
+			country_event = { id = SAIR_operation.105 }
+		}
+	}
+}
+
+
+#fifth Event 		Last
+espionage_operation_event = {
+	id = SAIR_operation.104
+	title = SAIR_operation.104.name
+	espionage_operation = yes
+	desc = SAIR_operation.104.desc
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {#cheks if target lost al robots
+		set_espionage_operation_progress_locked = yes
+		if = {
+			limit = {
+				target = {
+					NOT = {
+						any_owned_planet = {
+							any_owned_pop_group = {
+								has_trait = trait_mechanical
+							}
+						}
+					}
+				}
+			}
+		set_espionage_operation_flag = operation_failed
+		}
+	}
+
+	option = {
+		name = ACKNOWLEDGED 
+		trigger = {
+			NOT = { has_espionage_operation_flag = operation_failed }
+		}
+		owner = {
+			country_event = { id = SAIR_operation.106 }
+		}
+		target = {
+			country_event = { id = SAIR_operation.200 }
+		}
+	}
+	option = {
+		name = ACKNOWLEDGED 
+		trigger = {
+			has_espionage_operation_flag = operation_failed
+		}
+		owner = {
+			country_event = { id = SAIR_operation.105 }
+		}
+	}
+}
+
+#Rebellion invalid
+country_event = {
+	id = SAIR_operation.105
+	title = SAIR_operation.105.name
+	desc = SAIR_operation.105.desc
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	immediate = {	}
+	
+	option = {
+		name = ACKNOWLEDGED
+		set_espionage_operation_progress_locked = no
+		destroy_espionage_operation = from
+	}
+}
+
+#confirmation for owner
+country_event = {
+	id = SAIR_operation.106
+	title = SAIR_operation.106.name
+	desc = SAIR_operation.106.desc
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	immediate = {	}
+	
+	option = {
+		name = ACKNOWLEDGED
+	}
+}
+
+#start of rebellion((modded)syndaw.1000->(vanilla)syndaw.1020)
+#syndaw.1000 but cut out trigger
+country_event = {
+	id = SAIR_operation.200
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {	}
+
+	immediate = {
+		# uprising on colony
+		if = {
+			limit = {
+				any_owned_planet = {
+					any_owned_pop_group = {
+						has_trait = trait_mechanical
+					}
+					is_capital = no
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					any_owned_pop_group = {
+						has_trait = trait_mechanical
+					}
+					is_capital = no
+				}
+				planet_event = { id = syndaw.1020 }
+			}
+		}
+		# uprising wherever
+		else = {
+			random_owned_planet = {
+				limit = {
+					any_owned_pop_group = {
+						has_trait = trait_mechanical
+					}
+				}
+				planet_event = { id = syndaw.1020 }
+			}
+		}
+	}
+}
+
+#TEST event
+country_event = {
+	id = SAIR_operation.00
+	title = SAIR_operation.00.name
+	desc = SAIR_operation.00.desc
+	picture = GFX_evt_space_station
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	immediate = {	}
+	
+	option = {
+		name = ACKNOWLEDGED
+	}
+}

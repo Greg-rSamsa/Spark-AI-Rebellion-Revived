@@ -1,0 +1,198 @@
+#@diff_sair = -20 #for testing
+@diff_sair = 10
+@diff_sair_m = 8#easier for machine empire since they are AI themselves
+
+spark_AI_rebellion = {
+	target = none
+	categories = { op_cat_provocation op_cat_military }
+	picture = GFX_evt_spymaster
+	desc = spark_AI_rebellion_desc
+	stages = 5
+
+	resources = {
+		category = operations
+		cost = {
+			energy = 20000
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+
+	#spy_power_cost = 1 #for testing
+	spy_power_cost = 90
+	
+	potential = {
+	#	owner = { not = { has_trait = trait_mechanical } }
+	}
+	
+	allow = {
+		owner = { is_ai = no }
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		
+		target = {				#target available for AI rebellion
+			#mid_game_years_passed >= 0
+			is_country_type = default
+			num_owned_planets > 2
+			NOR = {
+				#has_country_flag = no_machine_uprising
+				has_country_flag = had_uprising
+				has_ethic = ethic_gestalt_consciousness
+				has_ascension_perk = ap_synthetic_evolution
+				#has_policy_flag = ai_full_rights
+				#has_policy_flag = robots_outlawed # should still happen if triggered by ban
+			}
+			# has a dangerous tech
+			OR = {
+				has_technology = tech_combat_computers_3
+				has_technology = tech_sapient_ai
+				has_technology = tech_synthetic_workers
+			}
+			any_owned_planet = {
+				any_owned_pop_group = {
+					has_trait = trait_mechanical
+				}
+			}
+		}
+	}
+	
+	stage = {#1
+		difficulty = @diff_sair
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.100
+	}
+	stage = {#2
+		difficulty = @diff_sair
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.101
+	}
+	stage = {#3
+		difficulty = @diff_sair
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.102
+	}
+	stage = {#4
+		difficulty = @diff_sair
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.103
+	}
+	stage = {#5
+		difficulty = @diff_sair
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.104
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+	}
+	
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+liberate_our_brothers = {
+	target = none
+	categories = { op_cat_provocation op_cat_military }
+	picture = GFX_evt_spymaster
+	desc = liberate_our_brothers_desc
+	stages = 5
+
+	resources = {
+		category = operations
+		cost = {
+			energy = 20000
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+
+	spy_power_cost = 1 #for testing
+	#spy_power_cost = 90
+	
+	potential = {
+		owner = { has_trait = trait_mechanical }
+		0
+	}
+	
+	allow = {
+		owner = { is_ai = no }
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		
+		target = {				#target avalible for AI rebelion
+			#mid_game_years_passed >= 0
+			is_country_type = default
+			num_owned_planets > 2
+			NOR = {
+				has_country_flag = no_machine_uprising
+				has_country_flag = had_uprising
+				has_ethic = ethic_gestalt_consciousness
+				has_ascension_perk = ap_synthetic_evolution
+				has_policy_flag = ai_full_rights
+				#has_policy_flag = robots_outlawed # should still happen if triggered by ban
+			}
+			# has a dangerous tech
+			OR = {
+				has_technology = tech_combat_computers_3
+				has_technology = tech_sapient_ai
+				has_technology = tech_synthetic_workers
+			}
+			any_owned_planet = {
+				any_owned_pop_group = {
+					has_trait = trait_mechanical
+				}
+			}
+		}
+	}
+	
+	stage = {#1
+		difficulty = @diff_sair_m
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.110
+	}
+	stage = {#2
+		difficulty = @diff_sair_m
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.111
+	}
+	stage = {#3
+		difficulty = @diff_sair_m
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.112
+	}
+	stage = {#4
+		difficulty = @diff_sair_m
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.113
+	}
+	stage = {#5
+		difficulty = @diff_sair_m
+		icon = GFX_espionage_chapter_icon_document
+		event = SAIR_operation.114
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+	}
+	
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}

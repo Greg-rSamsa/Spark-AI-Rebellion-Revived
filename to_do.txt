@@ -1,0 +1,18 @@
+-write all titles and desc
+-balance cost(initial and upkeep) and difficulty of stages
+-finish liberate_our_brothers
+
+-make liberate_our_brothers auto side with rebellion
+-add "curse" on failure dialogue option
+-check all:
+	picture
+	show_sound
+-copy language file to all other languages
+english
+braz_por
+french
+german
+polish
+russian
+spanish
+simp_chinese
