@@ -1,41 +1,40 @@
 ﻿l_english:
  #ops
- spark_AI_rebellion: "Start AI rebellion"
- spark_AI_rebellion_desc: "By strategically placed operators, equipped with prepared virus, we can force foreign robots to raise against their own creators."
+ spark_AI_rebellion: "Spark AI rebellion"
+ spark_AI_rebellion_desc: "Through strategically placed operators, equipped with a prepared virus, we can force foreign robots to raise up arms against their own creators."
  spark_AI_rebellion_on_success: "$IF_SUCCESSFUL|E$\n Will cause AI uprising inside  §H[root.target.GetName]§!."
  #ops events
  SAIR_operation.100.name: "Mobilizing Operatives"
  SAIR_operation.100.desc: "Our deep-cover operatives have begin their efforts on finding potential spread points inside §H[root.target.GetName]§!."
   
  SAIR_operation.101.name: "Securing spread points"
- SAIR_operation.101.desc: "Our operatives managed to identify several spread points in §H[root.target.GetName]§!. They start to create back doors, which will provide easier access for us in the future. We put a lot of recourses to "
+ SAIR_operation.101.desc: "Our operatives managed to identify several spread points in §H[root.target.GetName]§!. They have started creating backdoors, which will provide easier access for us in the future."
  
  SAIR_operation.102.name: "Virus development"
- SAIR_operation.102.desc: "After gaining control over spread points our scientists begun to develop virus. Some of them speculate that uprising may cover around half of §H[root.target.GetName]§! planets."
+ SAIR_operation.102.desc: "After gaining control over spread points our scientists have begun to develop a virus. Some of them speculate that the uprising may cover around half of §H[root.target.GetName]§! planets."
  
  SAIR_operation.103.name: "Gathering weapons"
- SAIR_operation.103.desc: "While primary cells are busy by virus deployment, our secondary cells will take care of Gathering necessary land army gear for our rebels."
+ SAIR_operation.103.desc: "While the primary cells are busy with virus deployment, our secondary cells will take care of gathering the necessary gear for the rebels."
  
  SAIR_operation.104.name: "Virus deployed"
- SAIR_operation.104.desc: "Everything is in place. Our operatives inside §H[root.target.GetName]§! await only for the order to activate Virus."
+ SAIR_operation.104.desc: "Everything is in place. Our operatives inside §H[root.target.GetName]§! await the order to activate the virus."
+
  #target lost all robots
  SAIR_operation.105.name: "No more robots in §H[root.target.GetName]§!."
- SAIR_operation.105.desc: "Our target lost or sell all it's robots. That means we cannot use robots they no longer own against them."
+ SAIR_operation.105.desc: "Our target lost or sold all it's robots. We can not use robots they no longer own against them."
+
  #confirmation for owner
  SAIR_operation.106.name: "Virus activated"
- SAIR_operation.106.desc: "Our efforts have pay off. Our operatives report, that just few hours ago there has been massive robotic riot inside the §H[fromfrom.GetName]§! across several of their planets. Our observers predict that it is only a matter of time when §H[fromfrom.GetName]§! publicly declare AI uprising."
+ SAIR_operation.106.desc: "Our efforts have paid off. Our operatives report that a few hours ago there have been massive robotic riot inside §H[fromfrom.GetName]§! across several of their planets. Our observers predict that it is only a matter of time till §H[fromfrom.GetName]§! publicly declares an AI uprising."
 
 
- #inf for target
- #SAIR_operation.107.name: "op target"
- #SAIR_operation.107.desc: "op target desc"
- 
+  ## AI uprising caused by machines
  SAIR_operation.00.name: "event TEST name"
  SAIR_operation.00.desc: "event TEST desc"
  #machine ops
- liberate_our_brothers: "Start AI rbelion"
- liberate_our_brothers_desc: "Start AI rbelion!desc"
- liberate_our_brothers_on_success: "Start AI rbelion!on success"
+ liberate_our_brothers: "Start AI rebellion"
+ liberate_our_brothers_desc: "Start AI rebellion!desc"
+ liberate_our_brothers_on_success: "Start AI rebellion!on success"
  #machine ops events
  SAIR_operation.110.name: "event 1 name"
  SAIR_operation.110.desc: "event 1 desc"
